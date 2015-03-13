@@ -1,0 +1,28 @@
+<h2>2015 Draw</h1>
+
+<div>Go to round <select ng-model="selectedRound" ng-change="doShortcut()" ng-options="round.title for round in rounds"></select></div>
+
+<ul>
+	<li ng-repeat="round in rounds">
+		<h3 ng-bind="round.title" ></h3>
+		<a id="{{ round.title }}"></a>
+		<table>
+			<tr>
+				<th>Home</th>
+				<th>Away</th>
+				<th>Venue</th>
+				<th>Date</th>
+				<th>Time</th>
+				<th>TV</th>
+			</tr>
+			<tr ng-repeat="game in draw[round.title]">
+				<td ng-bind="game.home"></td>
+				<td ng-bind="game.away"></td>
+				<td ng-bind="game.venue"></td>
+				<td ng-bind="game.date"></td>
+				<td ng-bind="game.time"></td>
+				<td ng-bind="game.tv"></td>
+			</tr>
+		</table>
+	</li>
+</ul>

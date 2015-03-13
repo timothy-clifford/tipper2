@@ -1,0 +1,45 @@
+<h2>This is the partial for view 1.</h2>
+
+<form>
+
+    <!-- Search -->
+    <section>
+        <label for="search"></label>
+        <input name="search" type="text" ng-model="searchStr"/>
+        
+        <button ng-model="mode" value="add">New</button>
+        <button type="submit" value="save">Save</button>
+    </section>
+    
+    
+    <!-- Add/Edit -->
+    <section>
+        <ul>
+            <li>
+                <label for="name">Name</label>
+                <input name="name" type="text" ng-model="item.name" />
+            </li>
+            <li>
+                <label for="id">ID</label>
+                <input name="id" type="text" ng-model="item.id" />
+            </li>
+            <li>
+                <label for="instructions">Instructions</label>
+                <!-- instructions is a link that is auto-generated -->
+                <input name="instructions" type="text" ng-model="item.instructions" />
+            </li>
+            <li>
+                <label for="description">Description</label>
+                <textarea name="description" ng-model="item.description"></textarea>
+            </li>
+        </ul>
+    
+    </section>
+    
+    <!-- List -->
+    <section>
+    
+    </section>
+
+</form>
+
