@@ -13,6 +13,7 @@
     "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
     "html5-boilerplate": "~4.3.0",
-    "angular-ui-grid": "3.0.0-rc.20"
+    "angular-ui-grid": "3.0.0-rc.20",
+    "sugar": "~1.4.1"
   }
 }
