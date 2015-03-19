@@ -6,7 +6,8 @@ angular.module('tipper2', [
 	'ngResource',
 	'ui.grid',
 	'tipper2.draw.services',
-	'tipper2.view1',
+	'tipper2.comp.services',
+	'tipper2.comp',
 	'tipper2.draw'
 ]).
 
@@ -15,6 +16,10 @@ config(['$routeProvider', function($routeProvider) {
     	templateUrl: 'draw/draw.html',
     	controller: 'DrawCtrl'
   	});
-  	$routeProvider.otherwise({redirectTo: '/view1'});
+	$routeProvider.when('/comp/ladder', {
+	    templateUrl: 'comp/ladder.html',
+	    controller: 'LadderCtrl'
+	});
+  	$routeProvider.otherwise({redirectTo: '/comp/ladder'});
 
 }]);
