@@ -18,7 +18,7 @@ angular.module('tipper2.draw', ['ngRoute', 'ui.grid'])
 
 	DrawSvc.query().$promise.then( function(data) {
 		$scope.draw = data;
-		$scope.currentRoundId = 2;
+		$scope.currentRoundId = 3;
 	});
 
 	$scope.isCurrentRoundId = function(roundId) {
