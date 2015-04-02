@@ -6,9 +6,10 @@
 
 <ul>
 	<li ng-repeat="round in draw">
-		<h3>{{ round.round }} ({{ round.games.length }})</h3>
-		<a id="{{ round.round }}"></a>
-		<table ng-show="isCurrentRoundId(round.order)" style="width: 100%;">
+		<h3> 
+			<a ng-href="#/round/{{ round.round }}" id="{{ round.round }}"> {{ round.round }}</a> ({{ round.games.length }})
+		</h3>
+		<table ng-show="isCurrentRoundId(round.order) || isOp" style="width: 100%;">
 			<tr>
 				<th>Home</th>
 				<th>Away</th>
@@ -18,8 +19,8 @@
 				<th>TV</th>
 			</tr>
 			<tr ng-repeat="game in round.games" >
-				<td><a href="" ng-bind="game.home"></a></td>
-				<td><a href="" ng-bind="game.away"></a></td>
+				<td><a ng-href="#/team/{{ game.home }}" ng-bind="game.home"></a></td>
+				<td><a ng-href="#/team/{{ game.away }}" ng-bind="game.away"></a></td>
 				<td ng-bind="game.venue"></td>
 				<td ng-bind="game.date"></td>
 				<td ng-bind="game.time"></td>
